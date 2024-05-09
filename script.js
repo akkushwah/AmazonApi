@@ -53,7 +53,7 @@ function renderContent(val, index) {
 function productDetails(index) {
   console.log(asin[index]);
   localStorage.setItem('asin', asin[index]);
-  window.location.assign('/productInfo.html')
+  window.location.href = "productInfo.html";
 }
 
 
