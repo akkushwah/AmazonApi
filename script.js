@@ -60,11 +60,8 @@ function productDetails(index) {
 
 // Showing product details on the product page
 var productsInfo;
-
 async function loadProductData() {
-  cartNumber()
   let asin = localStorage.getItem('asin')
-
   const url = `https://real-time-amazon-data.p.rapidapi.com/product-details?asin=${asin}&country=IN`;
   const options = {
     method: 'GET',
@@ -97,6 +94,7 @@ async function loadProductData() {
   } catch (error) {
     console.error(error);
   }
+  cartNumber()
 }
 
 // ********************************************************************
